@@ -48,14 +48,11 @@ public final class CustomStringBuilder implements Cloneable {
 
     public CustomStringBuilder(int capacity) {
         this.capacity = capacity;
-        this.value = new char[size];
+        this.value = new char[capacity];
     }
 
     public CustomStringBuilder append(char ch) {
-        if (capacity == size) {
-            capacity <<= 2;
-            value = Arrays.copyOf(value, capacity);
-        }
+        ensureCapacity(size + 1);
         value[size++] = ch;
         return this;
     }
@@ -85,7 +82,11 @@ public final class CustomStringBuilder implements Cloneable {
             if (capacity == Integer.MAX_VALUE) {
                 throw new OutOfMemoryError("Required length extends implementation limit");
             }
-            capacity <<= 2;
+            if (capacity == Integer.MAX_VALUE / 2 + 1) {
+                capacity = Integer.MAX_VALUE;
+            } else {
+                capacity <<= 1;
+            }
         }
     }
 
