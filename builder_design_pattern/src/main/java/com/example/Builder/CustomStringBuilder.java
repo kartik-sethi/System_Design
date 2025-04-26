@@ -42,8 +42,9 @@ public final class CustomStringBuilder implements Cloneable {
     }
 
     public CustomStringBuilder(String s) {
-        this.value = s.toCharArray();
-        this.capacity = value.length;
+        this.value = new char[INITIAL_THRESHOLD];
+        this.capacity = INITIAL_THRESHOLD;
+        append(s);
     }
 
     public CustomStringBuilder(int capacity) {
