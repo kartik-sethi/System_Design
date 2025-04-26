@@ -48,8 +48,9 @@ public final class CustomStringBuilder implements Cloneable {
     }
 
     public CustomStringBuilder(int capacity) {
-        this.capacity = capacity;
-        this.value = new char[capacity];
+        this.capacity = INITIAL_THRESHOLD;
+        ensureCapacity(capacity);
+        this.value = new char[this.capacity];
     }
 
     public CustomStringBuilder append(char ch) {
