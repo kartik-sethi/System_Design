@@ -28,6 +28,7 @@ import java.util.Arrays;
  * </pre>
  *
  * @author Kartik Sethi
+ * @see java.lang.StringBuilder
  */
 public final class CustomStringBuilder implements Cloneable {
 
@@ -72,6 +73,11 @@ public final class CustomStringBuilder implements Cloneable {
         return append(Integer.toString(i));
     }
 
+    /**
+     * Ensures that the internal array has at least the specified minimum capacity.
+     *
+     * @param minimumCapacity the minimum required capacity
+     */
     private void ensureCapacity(int minimumCapacity) {
         if (minimumCapacity > capacity) {
             newCapacity(minimumCapacity);
@@ -79,6 +85,12 @@ public final class CustomStringBuilder implements Cloneable {
         }
     }
 
+    /**
+     * Calculates a new capacity that is at least as large as the specified minimum.
+     * Doubles the capacity each time until the minimum is met or exceeded.
+     *
+     * @param minimumCapacity the minimum required capacity
+     */
     private void newCapacity(int minimumCapacity) {
         while (capacity < minimumCapacity) {
             if (capacity == Integer.MAX_VALUE) {
@@ -92,6 +104,12 @@ public final class CustomStringBuilder implements Cloneable {
         }
     }
 
+    /**
+     * Returns the size (character count).
+     *
+     * @return the length of the sequence of characters currently
+     *         represented by this object
+     */
     public int size() {
         return this.size;
     }
@@ -103,14 +121,14 @@ public final class CustomStringBuilder implements Cloneable {
      */
     @Override
     public String toString() {
-        return new String(value);
+        return new String(value, 0, size);
     }
 
     /**
-     * User to get deep clone of CustomStringBuilder
-     * 
-     * @return Returns a deep clone copy of current instance of CustomStringBuilder
-     * @throws CloneNotSupportedException
+     * Creates and returns a deep clone of this CustomStringBuilder instance.
+     *
+     * @return a deep copy of this CustomStringBuilder
+     * @throws CloneNotSupportedException if cloning is not supported
      */
     @Override
     protected Object clone() throws CloneNotSupportedException {
