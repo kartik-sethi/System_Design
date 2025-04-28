@@ -1,0 +1,5 @@
+/*
+ * Copyright (c) 2024, [Your Name] or [Your Company].
+ * All rights reserved.
+ * PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ */
