@@ -1,4 +1,4 @@
-package com.iterator_design_pattern.Collections;
+package com.iterator_pattern_arraylist.Collections;
 
 import java.util.Iterator;
 

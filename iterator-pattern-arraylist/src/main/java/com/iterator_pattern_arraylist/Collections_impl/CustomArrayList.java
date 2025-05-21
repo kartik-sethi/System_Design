@@ -1,4 +1,4 @@
-package com.iterator_design_pattern.Collections_impl;
+package com.iterator_pattern_arraylist.Collections_impl;
 
 import java.util.AbstractCollection;
 import java.util.Arrays;
@@ -6,8 +6,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.SequencedCollection;
 
-import com.iterator_design_pattern.Collections.CustomIterator;
-import com.iterator_design_pattern.Collections.CustomList;
+import com.iterator_pattern_arraylist.Collections.CustomIterator;
+import com.iterator_pattern_arraylist.Collections.CustomList;
 
 /**
  * Example usage of CustomArrayList:

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.interator_design_pattern</groupId>
-    <artifactId>iterator_design_pattern</artifactId>
+    <groupId>com.iterator_pattern_arraylist</groupId>
+    <artifactId>iterator-pattern-arraylist</artifactId>
     <version>1</version>
 
     <name>iterator_design_pattern</name>
@@ -14,8 +14,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -43,10 +43,9 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.11.0</version> <!-- Java 21 support -->
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <release>${maven.compiler.target}</release>
                     </configuration>
                 </plugin>
                 <plugin>

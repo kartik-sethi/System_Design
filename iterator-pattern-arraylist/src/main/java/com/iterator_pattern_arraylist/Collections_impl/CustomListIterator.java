@@ -1,10 +1,10 @@
-package com.iterator_design_pattern.Collections_impl;
+package com.iterator_pattern_arraylist.Collections_impl;
 
 import java.util.ConcurrentModificationException;
 import java.util.NoSuchElementException;
 
-import com.iterator_design_pattern.Collections.CustomIterator;
-import com.iterator_design_pattern.Collections_impl.CustomArrayList.ListData;
+import com.iterator_pattern_arraylist.Collections.CustomIterator;
+import com.iterator_pattern_arraylist.Collections_impl.CustomArrayList.ListData;
 
 /**
  * CustomListIterator is an implementation of the {@link CustomIterator}

@@ -1,7 +1,7 @@
-package com.iterator_design_pattern;
+package com.iterator_pattern_arraylist;
 
-import com.iterator_design_pattern.Collections.CustomList;
-import com.iterator_design_pattern.Collections_impl.CustomArrayList;
+import com.iterator_pattern_arraylist.Collections.CustomList;
+import com.iterator_pattern_arraylist.Collections_impl.CustomArrayList;
 
 public class App {
     public static void main(String[] args) {
