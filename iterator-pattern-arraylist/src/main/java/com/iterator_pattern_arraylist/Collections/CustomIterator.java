@@ -1,6 +1,9 @@
 package com.iterator_pattern_arraylist.Collections;
 
+import com.iterator_pattern_arraylist.Collections_impl.CustomArrayList;
+
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * CustomIterator is an extension of the standard {@link Iterator} interface

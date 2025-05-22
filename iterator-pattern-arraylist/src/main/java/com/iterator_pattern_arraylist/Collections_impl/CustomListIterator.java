@@ -50,8 +50,8 @@ public class CustomListIterator<E> implements CustomIterator<E> {
      * count.
      *
      * @param value             The array backing the collection.
-     * @param modificationCount The current modification count of the collection.
-     * @param size              The size of the collection.
+     * @param data model consisting of modificationCount consists of the current modification
+     * count of the collection and the size of the collection.
      */
     CustomListIterator(Object[] value, ListData data) {
         this.value = value;
