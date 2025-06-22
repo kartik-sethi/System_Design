@@ -77,7 +77,7 @@ public class ParkingLotApplication {
 
                     case ENTRY -> {
                         Vehicle vehicle = inputVehicle();
-                        Ticket ticket = entryService.enter(vehicle);
+                        Ticket ticket = entryService.enterVehicle(vehicle);
                         tickets.add(ticket);
                         System.out.println("Ticket issued: " + ticket);
                     }
